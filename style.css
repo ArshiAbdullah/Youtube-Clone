@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: roboto;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.container {
+  height: 100vh;
+  width: 95%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+}
+.logo img {
+  width: 150px;
+  height: auto;
+  margin-left: 40px;
+}
+
+.side-nav,
+img {
+  padding: 9px;
+  gap: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+}
+.sma {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+}
+.center-nav {
+  display: flex;
+}
+.search {
+  display: flex;
+}
+.ser {
+  padding: 10px;
+  height: 50px;
+  margin-right: 10px;
+  margin-top: 0.1px;
+}
+.search input {
+  min-width: 400px;
+  padding: 10px;
+  border: 0.5px solid #ccc;
+  border-radius: 25px 0px 0px 25px;
+  transition: 0.5s;
+  height: 40px;
+}
+.search input:hover {
+  min-width: 500px;
+  padding: 10px;
+  border: 0.5px solid #ccc;
+  border-radius: 25px 0px 0px 25px;
+  transition: 0.5s;
+}
+.search button {
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 0px 25px 25px 0px;
+}
+.mic {
+  padding: 0px;
+  border-radius: 9999px;
+  background: #ccc;
+  display: grid;
+  place-items: center;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.mic img {
+  width: 37px;
+  height: 45px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.tags {
+  display: flex;
+  padding: 1px 20px;
+  gap: 15px;
+  border-top: 0px solid #ccc;
+  margin-left: 40px;
+}
+
+.tag {
+  padding: 1px 10px;
+  border-radius: 20px;
+  border: 0px solid rgb(22, 22, 22);
+  cursor: pointer;
+}
+.dark {
+  background: #000;
+  color: white;
+}
+.Light {
+  background: rgb(238, 238, 238);
+  color: rgb(67, 67, 67);
+}
+
+.container {
+  display: flex;
+}
+.aside {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.side-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.side-icon img {
+  width: 50px;
+}
+.side-icon p {
+  font-size: 12px;
+  margin-top: -5px;
+  margin-left: 10px;
+}
+.main-container {
+  width: 100%;
+  margin-left: 5px;
+}
+main {
+  min-height: 100vh;
+  background: rgb(240, 238, 238);
+  margin-top: 10px;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(320px, 1fr));
+}
+.card {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
+  gap: 1px;
+  margin-bottom: 20px;
+}
+.card,
+img {
+  border-radius: 10px;
+}
+
+.avatar-content {
+  padding-top: 10px;
+  display: flex;
+  gap: 1px;
+}
+.card h3 {
+  font-size: 20px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.content-status {
+  display: flex;
+  font-size: 14px;
+  gap: 5px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    width: 500px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    width: 300px;
+    margin-left: 20px;
+    gap: 2px;
+  }
+  .tags {
+    display: none;
+  }
+  .center-nav {
+    width: 5px;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .bars,
+  .side-icon {
+    display: none;
+  }
+
+  .search input {
+    min-width: 15px;
+    padding: 5px;
+
+    border: 0.5px solid #ccc;
+    border-radius: 25px 0px 0px 25px;
+  }
+
+  .search input:hover {
+    display: none;
+  }
+  .logo img {
+    width: 100px;
+    height: 70px;
+    margin: 5px;
+  }
+
+  .mic {
+    padding: 0px;
+    border-radius: 9999px;
+    background: #ccc;
+    display: grid;
+    place-items: center;
+    margin-left: 25px;
+    cursor: pointer;
+  }
+  .mic img {
+    width: 37px;
+    height: 45px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .ser {
+    padding: 10px;
+    height: 50px;
+    margin-right: 10px;
+    margin-top: 0.1px;
+  }
+  nav {
+    margin-right: 350px;
+    height: 50px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 310px;
+  }
+
+  .card-container {
+    width: 280px;
+    grid-template-columns: 1fr;
+    margin: auto;
+    margin-right: 2rem;
+  }
+  nav {
+    margin-right: 600px;
+    height: 50px;
+    margin-top: 10px;
+  }
+
+  .search input {
+    width: 80px;
+    padding: 3px;
+    border: 0.5px solid #ccc;
+    border-radius: 25px 0px 0px 25px;
+  }
+
+  .logo img {
+    width: 70px;
+    height: 60px;
+    margin: 2px;
+  }
+}
